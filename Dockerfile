@@ -4,7 +4,7 @@ FROM python:3.10-bullseye
 WORKDIR /app
 
 RUN apt-get update && \
-    apt-get -y install cron iperf3 iputils-ping
+    apt-get -y install cron iputils-ping
 
 COPY ./flask_app/requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
