@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  flask-cron:
+    build: .
+    ports:
+     - 5000:5001
+    environment:
+      FLASK_ENV: development
+      #FLASK_ENV: production
+    volumes:
+     - ./flask_app:/app
+     - ./cron_data:/cron_data
+     - ./logs:/mylogs
